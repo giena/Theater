@@ -1,0 +1,680 @@
+[
+  {
+    "speaker": "CAROLINE",
+    "text": "Christelle arrête-toi !",
+    "action": "(interpellant les trois)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Quoi ?",
+    "action": "(se retournant)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Qu’est-ce qui se passe encore ?",
+    "action": "(se retournant)"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Vous pouvez pas faire ça, c’est pas possible !"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Tu… Quoi ?? Qu’est-ce qui est pas possible ??"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Vous pouvez pas vous marier, j’ai bien réfléchi… Je peux pas…"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "C’est quoi encore cette histoire Caroline ??"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Et pourquoi s’il te plaît ??"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Christelle, je crois que t’as pas conscience du mal que tu es en train de me faire."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Quoi ?"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Écoute Caroline, c’est très sérieux ce qui est en train de se passer dans ma vie aujourd’hui."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Je suis bien placée pour le savoir que c’est sérieux. C’est de ma vie dont il est question à moi aussi… Je crois que je survivrai pas si vous allez au bout de ce que vous faites."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Quoi ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "C’est quoi ce délire ??"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "T’as gâché une grande partie de la vie de notre famille… Mais aujourd’hui c’est plus possible, c’est mon mariage… Je te tue si tu fous ta merde."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Je te jure Christelle, c’est pas un coup de folie. C’est sérieux, je peux pas faire autrement vraiment… Je te demande un vrai service de sœur, de sœur jumelle, ne vous mariez pas !! Je ne le supporterai pas. Tu ne peux pas imaginer le mal que ça va me faire si vous faites votre vie ensemble…"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "T’es amoureuse de Christian ??"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Oui, à la folie et lui aussi y m’aime… À la folie. Je le sais, je le sens."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "M’enfin c’est quoi cette histoire !!"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Et ça sort aujourd’hui ?? C’est pour m’emmerder que tu fais ça ??"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "J’ai essayé de me contenir, je te jure. Mais je peux pas, c’est au-dessus de mes forces, j’y arrive pas… Je veux pas que vous vous mariiez, c’est insupportable comme idée ! Ça va à l’inverse des lois naturelles !! C’est grave !! Il m’aime aussi. Il m’aime comme je l’aime."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais c’est pas vrai, elle est encore plus dingue qu’elle n’a jamais été…"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Ne m’insulte pas Christian s’il te plaît."
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Elle est en pleine crise."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "N’insulte pas notre amour, même si je sais que la situation n’est pas facile pour toi."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais qu’est-ce que tu racontes ? Tu dis n’importe quoi…"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Qu’est-ce que vous foutez ?? Y a un problème ?",
+    "action": "(entrant, affolée)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "C’est Caroline qui est en train de bousiller mon mariage."
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Laisse-nous tranquilles Caroline… Aujourd’hui on ne peut plus rien pour toi ! Ce que tu fais là c’est très très grave, si tu gâches ce moment de la vie de Christelle personne ne te le pardonnera jamais dans la famille."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Vous comprenez vraiment rien on dirait."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Excusez-moi, ça me concerne un peu j’aimerais bien dire un mot…"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Et depuis quand tu es amoureuse de Christian, dis-moi ??"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Elle est amoureuse de Christian ?"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Oui il paraît… Fallait s’y attendre… J’étais sûre qu’elle allait nous faire quelque chose aujourd’hui."
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Mais bordel, vous occupez pas d’elle, elle est en train de vous faire son cirque. Y a tout le monde là-bas qui est en train de se demander ce qui se passe. Allez foncez.",
+    "action": "(entraînant Christelle vers la salle des mariages)"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Putain tu me déçois toi aussi, je pensais pas !!"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Elle a pourri toute ma vie cette fille et aujourd’hui elle continue.",
+    "action": "(revenant vers Caroline, suivie des autres)"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Aujourd’hui c’est toi qui es en train de pourrir ma vie !!"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Moi je pourris ta vie ?"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Oui tu veux m’enlever l’homme que j’aime et tu t’étales au grand jour avec lui, sous mes yeux."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Mais depuis quand est-ce que tu aimes Christian ??",
+    "action": "(explosant)"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Depuis qu’on est tout petits, depuis toujours !"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Depuis que vous êtes tout petits ??"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Oui."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "N’importe quoi."
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Mais c’est n’importe quoi, mais pourquoi on discute ?!"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Bon, ben voilà admettons, mais aujourd’hui je l’aime, moi et c’est moi qu’il aime, lui. La preuve c’est qu’on se marie."
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Mais pourquoi est-ce que tu discutes ??"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Se marier c’est pas une preuve… Qui te dit qu’il t’aime vraiment toi et pas moi ?"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Bon ben demande-lui !!"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais pourquoi tu discutes avec elle alors que les gens nous attendent ?!"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "N’essaye pas de fuir Christian."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Moi j’en peux plus de tout ça !!"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Christian m’a choisie et je suis désolée pour toi, je ne savais pas que tu l’aimais secrètement."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Il m’aime aussi."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais c’est pas vrai."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Alors prouve-moi que tu l’aimes elle et pas moi."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Je me marie avec ta sœur et pas avec toi."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Ça c’est pas une preuve, des tas de gens se marient par nécessité ou pour respecter une parole qu’ils ont donnée un jour où ils étaient bourrés par exemple. Mais toi c’est moi que tu aimes et tu le sais bien."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais qu’est-ce qu’elle raconte ??"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Prouve-moi que tu l’aimes elle alors !! Je t’écoute… Prouve-moi que tu l’aimes plus que moi, si tu y arrives je te jure qu’après je vous laisserai tranquilles.",
+    "action": "(Un petit temps.)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais je vais rien te prouver du tout c’est de la folie… Tu es folle Caroline et c’est tout."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Évidemment tu ne peux rien me prouver du tout… C’est ça la preuve… Mais je le savais… Tu m’aimes, ça se ressent tu sais…"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Bon là c’est grave !! C’est une très grosse crise."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Et la preuve c’est qu’on s’est embrassés, tu m’as embrassée. Il m’a embrassée…",
+    "action": "(Aux autres.)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Quoi ??"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Quoi ?"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Comment ça je t’ai embrassée ?"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Elle est folle !!"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Comment ça je suis folle, on ne s’est pas embrassés Christian ? Tu ne m’as pas embrassée ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "T’es vraiment totalement infecte et répugnante toi et complètement givrée surtout."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Mais est-ce que je suis une menteuse ?? C’est vrai ou c’est pas vrai qu’on s’est embrassés ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Tu veux tout détruire c’est ça ?"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Je veux pas que tu gâches ma vie et la tienne."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Vous vous êtes embrassés ?",
+    "action": "(à Christian)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais non !"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Tu nies ? Quel jeu tu joues Christian ? Pourquoi tu mens ? Pourquoi tu veux te sacrifier comme ça en épousant Christelle alors que tu l’aimes seulement comme une amie et pas d’amour et que t’as surtout pitié d’elle, comme tu m’as dit. Parce qu’elle a beaucoup souffert dans sa vie avec son mari d’avant."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Mais tu es monstrueuse toi !!"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "C’est pas vrai Christian ??"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Putain mais c’est pas vrai ! Qu’est-ce qui m’arrive ?? C’est un cauchemar cette sœur !! Tu es un vrai cauchemar !! Tu es mon cauchemar, c’est pas vrai !! Tu veux me tuer ? Tu veux me détruire, tu veux ma mort ?"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Excuse-moi si je te fais du mal mais dans l’amour, je crois, c’est pas la raison ordinaire qui doit parler c’est autre chose. Christian il se marie avec toi parce qu’il veut pas te décevoir et te faire du mal justement mais dans sa tête c’est avec moi qu’il voudrait être… Dans la vie on ne doit jamais sacrifier le vrai amour, jamais. Tant pis si c’est cruel."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Bon, moi j’abandonne… J’arrête ! Allez dire à tout le monde qu’on annule ! On arrête tout ! Moi je rentre chez moi, j’en peux plus."
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Mais ça va pas ?! C’est pas parce qu’elle est malade et en crise que tu dois foutre ta vie en l’air… Sa maladie c’est d’essayer de détruire justement… Et elle est en train d’y arriver."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Ça vous arrange bien le concept de maladie !!"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Et tu l’as embrassée ou tu l’as pas embrassée cette timbrée ?? Réponds-moi s’te plaît !!",
+    "action": "(à Christian) (Un temps.)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "On s’est fait un baiser, oui c’est vrai. Je sais pas pourquoi j’ai fait ça. C’était une pulsion. J’avais envie, un soir où j’étais perdu, en raccompagnant ta sœur en bagnole, mais le lendemain je lui ai parlé pour remettre les choses à leur place et on avait décidé de jamais plus en rediscuter. Putain, on a traversé de drôles de choses toi et moi depuis deux ans, ç’a été drôlement compliqué quand même. Y a eu nos divorces à tous les deux et puis nous on savait plus à une période si on s’aimait parce qu’on se connaissait depuis quarante ans ou bien parce qu’on s’aime vraiment."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Oh làlàlà putain !!"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Tu l’as embrassée ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Oui. Je sais c’est pas très intelligent…"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Sois pas trop cruel avec moi s’il te plaît, je sais que tu veux la préserver elle mais quand même.",
+    "action": "(à Christian)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Mais pourquoi tu as fait ça ?? Tu sais bien comment elle est.",
+    "action": "(à Christian)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Ben oui je sais mais j’ai aussi une certaine complicité avec ta sœur… Forcément, je vous connais toutes depuis toujours, on se connaît depuis l’enfance tous… Mais là elle, elle veut tout casser entre nous c’est tout !!",
+    "action": "(à Christelle)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Mais pourquoi tu l’as embrassée ?"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Elle est fragile, elle est malade, Christian. Tu savais bien le risque que tu prenais quand même en faisant ça !!"
+  },
+  {
+    "speaker": "MYRIAM",
+    "text": "Qu’est-ce qui se passe ici ? L’adjoint de la mairie doit partir dans deux minutes… Il est totalement fou de rage…",
+    "action": "(entrant, suivie de son mari, très affolée)"
+  },
+  {
+    "speaker": "LE MARI DE MYRIAM",
+    "text": "Et il est vraiment con en plus."
+  },
+  {
+    "speaker": "MYRIAM",
+    "text": "Qu’est-ce qui se passe ?"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "C’est la crise."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Mais pourquoi t’as fait ça ? C’est irresponsable de faire ça.",
+    "action": "(à Christian)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais je sais pas, j’étais fatigué c’est tout… Putain mais on a quarante-cinq ans, bientôt cinquante !! C’est quoi un baiser ? Je l’ai embrassée, je lui ai pas fait l’amour."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "C’était à deux doigts quand même.",
+    "action": "(à Christian)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Je l’ai embrassée on va pas sacrifier notre vie d’adultes et notre avenir pour un baiser. Merde.",
+    "action": "(à Christelle)"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "En fait t’as embrassé toutes les femmes de la famille toi ?",
+    "action": "(à Christian)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Comment ça ?"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Qu’est-ce que tu veux dire ?"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Tu vois pas ce que je veux dire ??"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Qu’est-ce que tu veux dire ??"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Non, rien."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Mais si, vas-y maintenant, tant qu’on y est !!"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Ben y a cinq ans on a eu notre petite embrassade à nous aussi Christian et moi, c’est tout."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Embrassade comment ?"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Ben embrassade. Je vais pas vous faire un dessin."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais ça n’a rien à voir. C’est pas la même période en plus et c’était à une soirée et on était totalement ivres."
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Et on en a parlé le lendemain nous aussi, pour se dire qu’on devait plus en reparler."
+  },
+  {
+    "speaker": "LE MARI DE MYRIAM",
+    "text": "On annule tout alors ?? Bon ben je vais prévenir les autres.",
+    "action": "Il sort."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais non !! Il déconne ton mari Myriam j’espère !!",
+    "action": "(à Myriam)"
+  },
+  {
+    "speaker": "MYRIAM",
+    "text": "Je crois."
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Qu’est-ce que tu veux insinuer Marie-Ève en disant ça ?? Qu’il est amoureux de toi aussi ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Je rêve. Vous vous rendez compte qu’on est en train de foutre en l’air notre projet de vie à Christelle et à moi. Tout ça pour des histoires de baisers sur la bouche. C’est surréaliste… On se croirait dans une secte catholique au fin fond d’une campagne au XIXe siècle… C’est pas possible."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Pourquoi ? Être évolué c’est séduire toutes les sœurs d’une même famille, c’est ça ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais enfin tu dis n’importe quoi !! On se connaît depuis toujours, toi et ta famille. J’étais votre voisin, c’est pas ma faute quand même si je connais toutes tes sœurs depuis toujours… Je connais toutes tes sœurs quasiment aussi bien que toi… Je les ai fréquentées autant que toi et tu le sais… J’étais même plus proche de Nathalie que de toi pendant longtemps, on était au lycée dans la même classe, ensemble.",
+    "action": "(à Christelle)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Oui mais avec Nathalie il s’est rien passé que je sache, c’est ce que tu m’as toujours dit !!"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais non… Et surtout, bordel, on a tous eu une vie avant… On va pas se mettre à la passer au microscope !! La question essentielle aujourd’hui c’est qu’est-ce qu’on veut faire toi et moi de notre avenir, c’est pas le passé qui est important merde…"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Tu veux peut-être me dire qu’il y a eu quelque chose aussi avec Nathalie, c’est ça ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Pourquoi tu me demandes ça ? Je viens de te dire qu’il s’est rien passé avec elle, on en a déjà parlé… Demande-lui si tu veux."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Pourquoi tout ça m’arrive aujourd’hui ??",
+    "action": "(Elle pleure.)"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais qu’est-ce qui se passe, je comprends rien ??"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "C’est horrible ce que je ressens Christian, comme ça d’un coup… C’est horrible."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Qu’est-ce qui est horrible ??"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Je suis en train de descendre de cinquante étages sans m’arrêter… Et j’ai l’impression que je vais m’écraser, m’exploser en bas… Nathalie m’a parlé il y a un an… quand notre relation à nous devenait sérieuse. Elle m’a dit qu’il s’était passé quelque chose entre vous quand vous étiez ados… Et que c’était votre secret… Je croyais que c’était pas très grave, j’attendais que tu m’en parles un jour mais là maintenant aujourd’hui je sais plus… Finalement je crois que je trouve ça très grave en fait…"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Oh làlàlàlàlàlàlà !!"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Elle est vachement compliquée en fait cette situation !!"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Ce qui est bien je trouve, c’est que ça met bien en évidence que ce mariage est une erreur."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Mais putain, pourquoi est-ce que tu lui as dit ??",
+    "action": "(à Nathalie)"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Parce que c’est la vérité… Je lui ai dit la vérité, c’est ma sœur quand même, elle venait de m’annoncer qu’elle était follement amoureuse de toi et que vous alliez peut-être vous marier."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Oh làlàlàlàlàlà !"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Vous vous êtes juste embrassés ou vous êtes allés plus loin ??"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Non, on s’est juste embrassés, on a flirté pendant une petite quinzaine de jours… Dans le plus grand secret… Et ça s’est arrêté quand il est sorti un soir avec Myriam…"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Avec Myriam ??"
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Oh làlàlàlàlà !"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "J’ai pas supporté ! À l’époque j’avais des principes… J’avais pas pardonné qu’il me trahisse, avec ma grande sœur en plus… C’était à une soirée… D’après lui il l’avait juste embrassée… Ils avaient fait ça parce qu’ils étaient malheureux tous les deux il m’a dit… Parce qu’on s’était disputés lui et moi juste avant… Il m’avait dit qu’il regrettait à mort d’avoir fait ça… J’en ai jamais reparlé avec Myriam."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Tu m’avais pas raconté ça !!",
+    "action": "(à Nathalie)"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "Non je n’ai pas osé, je t’ai raconté ce qui me concernait pas ce qui concernait Myriam."
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Oh làlàlàlàlàlà !"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Christian t’a embrassée ??",
+    "action": "(à Myriam)"
+  },
+  {
+    "speaker": "MYRIAM",
+    "text": "Oh mais c’est vieux ! Il y a vingt ans !! On est quand même pas obligés aujourd’hui de se polluer la vie avec ces histoires vieilles d’il y a vingt ans."
+  },
+  {
+    "speaker": "CHRISTIAN",
+    "text": "Ah OK merci, enfin ! Une parole sensée."
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Entre sœurs éventuellement c’est des choses qui peuvent se dire."
+  },
+  {
+    "speaker": "MYRIAM",
+    "text": "Eh bien moi je crois pas."
+  },
+  {
+    "speaker": "LE MARI DE MYRIAM",
+    "text": "Vous en êtes où ? Le mec de la mairie est sur le départ ! Vous faites des gueules d’enterrement maintenant qu’est- ce qui se passe ??",
+    "action": "(entrant)"
+  },
+  {
+    "speaker": "CAROLINE",
+    "text": "Moi je m’en vais… Christian c’est pas la peine de me rappeler… Le coup de Myriam là c’est trop pour moi…",
+    "action": "(sortant)"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Tout ça c’est à cause de ta femme. Le mariage de Christelle est en train de s’écrouler… Et la relation de Christian avec Caroline aussi, c’est Myriam qui a tout fait foirer dans cette histoire.",
+    "action": "(au mari de Myriam)"
+  },
+  {
+    "speaker": "CHRISTELLE",
+    "text": "Moi aussi je m’en vais, désolée Christian je sais pas si je suis vieux jeu comme tu dis mais ça passe pas j’ai l’impression d’être dans un téléfilm. On se rappellera plus tard.",
+    "action": "(sortant, en direction de là d’où elle était arrivée)"
+  },
+  {
+    "speaker": "LE MARI DE MYRIAM",
+    "text": "Quoi ? Christian avait une relation avec Caroline ??"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Oui et avec Myriam ta femme aussi !!"
+  },
+  {
+    "speaker": "LE MARI DE MYRIAM",
+    "text": "Ah bon ?"
+  },
+  {
+    "speaker": "MARIE-ÈVE",
+    "text": "Quelqu’un s’occupe de récupérer Christelle ? Moi je vais aller prévenir les autres…",
+    "action": "(Elle sort en direction de la salle des mariages.)"
+  },
+  {
+    "speaker": "NATHALIE",
+    "text": "J’y vais je m’en occupe.",
+    "action": "(Elle sort, rejoignant Christelle.)"
+  },
+  {
+    "speaker": "MYRIAM",
+    "text": "Christian et moi on s’est embrassés y a vingt ans… Y a vraiment de quoi déclencher une guerre nucléaire tu penses ??",
+    "action": "(à son mari)"
+  },
+  {
+    "speaker": "LE MARI",
+    "text": "Ben non… C’est drôle, tu me l’avais jamais dit."
+  },
+  {
+    "speaker": "MYRIAM",
+    "text": "Je m’en rappelais plus. Ça avait été bien ce soir-là tu te souviens ? Je m’en souviens. En fait c’est con mais j’ai toujours regretté que ça n’aille pas plus loin entre nous deux.",
+    "action": "(Le mari de Myriam sort. À Christian.)"
+  }
+]
