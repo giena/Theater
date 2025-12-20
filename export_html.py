@@ -6,9 +6,9 @@ import edge_tts
 import shutil
 
 # --- CONFIGURATION ---
-SCENE_FILE = "scenes/mariage.txt"
+SCENES_DIR = "scenes"
 CASTING_FILE = "casting.json"
-EXPORT_DIR = "export"
+EXPORT_DIR = "docs"  # Changement ici : 'export' -> 'docs' pour GitHub Pages
 AUDIO_DIR = "audio"
 
 # --- FONCTIONS UTILITAIRES ---
@@ -41,36 +41,19 @@ def get_voice_for_speaker(speaker_name, config):
         voice_name = config["voices"][voice_name]
     return voice_name
 
-def parse_scene(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-    dialogue = []
-    current_speaker = None
-    current_text = []
-    speaker_pattern = re.compile(r'^([A-ZÀ-ÖØ-Þ\-\s]+(?:\([^\)]+\))?)\.\s*(.*)')
-
-    for line in lines:
-        line = line.strip()
-        if not line: continue
-        match = speaker_pattern.match(line)
-        if match:
-            if current_speaker:
-                dialogue.append({'speaker': current_speaker, 'text': " ".join(current_text)})
-            raw_speaker = match.group(1)
-            clean_name = re.sub(r'\s*\(.*\)', '', raw_speaker).strip()
-            current_speaker = clean_name
-            current_text = [match.group(2)]
-        else:
-            if current_speaker:
-                current_text.append(line)
-    if current_speaker:
-        dialogue.append({'speaker': current_speaker, 'text': " ".join(current_text)})
-    return dialogue
+def load_scene(filepath):
+    if filepath.endswith('.json'):
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except:
+            return []
+    return []
 
 # --- GÉNÉRATION ---
 
 async def generate_export():
-    print(f"--- Démarrage de l'export HTML ---")
+    print(f"--- Démarrage de l'export HTML pour GitHub Pages (dossier docs/) ---")
     
     full_export_path = os.path.join(os.getcwd(), EXPORT_DIR)
     full_audio_path = os.path.join(full_export_path, AUDIO_DIR)
@@ -79,134 +62,441 @@ async def generate_export():
         shutil.rmtree(full_export_path)
     os.makedirs(full_audio_path)
     
-    print(f"Dossier créé : {full_export_path}")
-
+    # Création d'un fichier .nojekyll pour dire à GitHub de ne pas traiter ce dossier
+    # (utile si on a des dossiers commençant par _ comme _audio, mais ici audio est ok)
+    with open(os.path.join(full_export_path, ".nojekyll"), "w") as f:
+        f.write("")
+    
     config = load_casting(CASTING_FILE)
-    dialogue = parse_scene(SCENE_FILE)
-    all_speakers = sorted(list(set(d['speaker'] for d in dialogue)))
+    scenes_data = {}
     
-    js_data = []
+    all_files = os.listdir(SCENES_DIR)
+    scene_files = [f for f in all_files if f.endswith(".json")]
+    scene_files.sort()
     
-    print(f"Génération des fichiers audio ({len(dialogue)} répliques)...")
-    
-    for index, line in enumerate(dialogue):
-        speaker = line['speaker']
-        text = line['text']
-        voice = get_voice_for_speaker(speaker, config)
-        
-        filename = f"line_{index:03d}.mp3"
-        filepath = os.path.join(full_audio_path, filename)
-        
-        text_clean = re.sub(r'\([^\)]+\)', '', text)
-        
-        if text_clean.strip():
-            communicate = edge_tts.Communicate(text_clean, voice)
-            await communicate.save(filepath)
-        
-        js_data.append({
-            "id": index,
-            "speaker": speaker,
-            "text": text,
-            "audio": f"{AUDIO_DIR}/{filename}" if text_clean.strip() else None
-        })
-        
-        if index % 10 == 0:
-            print(f"  -> {index}/{len(dialogue)}...")
+    if not scene_files:
+        print(f"Erreur : Aucun fichier .json trouvé dans '{SCENES_DIR}'")
+        return
 
+    print(f"Scènes trouvées : {len(scene_files)}")
+
+    for scene_file in scene_files:
+        scene_name = os.path.splitext(scene_file)[0]
+        print(f"\nTraitement de la scène : {scene_name}")
+        
+        dialogue = load_scene(os.path.join(SCENES_DIR, scene_file))
+        if not dialogue: continue
+
+        roles = sorted(list(set(d.get('speaker', 'UNKNOWN') for d in dialogue)))
+        processed_dialogue = []
+        
+        for index, line in enumerate(dialogue):
+            speaker = line.get('speaker', 'UNKNOWN')
+            text = line.get('text', '')
+            action = line.get('action', '')
+            voice = get_voice_for_speaker(speaker, config)
+            
+            safe_scene_name = re.sub(r'[^a-zA-Z0-9]', '_', scene_name)
+            filename = f"{safe_scene_name}_{index:03d}.mp3"
+            filepath = os.path.join(full_audio_path, filename)
+            
+            text_clean = re.sub(r'\([^\)]+\)', '', text)
+            
+            has_audio = False
+            if text_clean.strip():
+                try:
+                    communicate = edge_tts.Communicate(text_clean, voice)
+                    await communicate.save(filepath)
+                    has_audio = True
+                except Exception as e:
+                    print(f"  Erreur audio ({speaker}): {e}")
+            
+            processed_dialogue.append({
+                "id": index,
+                "speaker": speaker,
+                "text": text,
+                "action": action,
+                "audio": f"{AUDIO_DIR}/{filename}" if has_audio else None
+            })
+            
+            if index % 10 == 0:
+                print(f"  -> {index}/{len(dialogue)}...")
+        
+        scenes_data[scene_name] = {
+            "roles": roles,
+            "dialogue": processed_dialogue
+        }
+
+    # --- GÉNÉRATION HTML ---
+    
     html_content = f"""
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Répétition : {os.path.basename(SCENE_FILE)}</title>
+    <title>Théâtre Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {{ font-family: sans-serif; background: #1a1a1a; color: #eee; margin: 0; padding: 20px; display: flex; flex-direction: column; height: 100vh; box-sizing: border-box; }}
-        #setup {{ text-align: center; margin-top: 50px; }}
-        select {{ padding: 10px; font-size: 1.2em; margin: 10px; }}
-        button {{ padding: 10px 20px; font-size: 1.2em; cursor: pointer; background: #4CAF50; color: white; border: none; border-radius: 5px; }}
-        
-        #stage {{ display: none; flex: 1; flex-direction: column; overflow: hidden; }}
-        #dialogue-container {{ flex: 1; overflow-y: auto; padding: 20px; border: 1px solid #333; border-radius: 8px; background: #252525; margin-bottom: 20px; }}
-        
-        .line {{ padding: 15px; margin-bottom: 10px; border-radius: 5px; opacity: 0.5; transition: all 0.3s; }}
-        .line.active {{ opacity: 1; background: #333; border-left: 5px solid #4CAF50; transform: scale(1.02); }}
-        .line.user-turn {{ border-left-color: #FF9800; background: #3e2723; }}
-        
-        .speaker {{ font-weight: bold; font-size: 0.9em; color: #aaa; margin-bottom: 5px; }}
-        .text {{ font-size: 1.2em; line-height: 1.4; transition: all 0.3s; }}
-        
+        :root {{
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --paper-color: #1e1e1e;
+            --accent-color: #d4af37; /* Or */
+            --highlight-color: #2c2c2c;
+            --user-highlight: #3e2723;
+            --font-script: 'Courier Prime', monospace;
+            --font-title: 'Playfair Display', serif;
+        }}
+
+        body {{
+            font-family: var(--font-script);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }}
+
+        /* --- SETUP SCREEN --- */
+        #setup {{
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #2a2a2a 0%, #000000 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }}
+
+        h1 {{
+            font-family: var(--font-title);
+            font-size: 3em;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+            letter-spacing: 2px;
+        }}
+
+        .setup-card {{
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }}
+
+        select {{
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 4px;
+            font-family: var(--font-script);
+            font-size: 1.1em;
+        }}
+
+        button.start-btn {{
+            background: var(--accent-color);
+            color: #000;
+            font-family: var(--font-title);
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }}
+
+        button.start-btn:hover {{
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }}
+
+        /* --- STAGE --- */
+        #stage {{
+            display: none;
+            flex: 1;
+            flex-direction: column;
+            height: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            background: var(--paper-color);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            position: relative;
+        }}
+
+        #header-bar {{
+            padding: 15px 20px;
+            border-bottom: 2px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #181818;
+        }}
+
+        #scene-title {{
+            font-family: var(--font-title);
+            color: var(--accent-color);
+            font-size: 1.2em;
+        }}
+
+        #back-btn {{
+            background: transparent;
+            border: 1px solid #555;
+            color: #888;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-family: var(--font-script);
+            font-size: 0.8em;
+        }}
+
+        #dialogue-container {{
+            flex: 1;
+            overflow-y: auto;
+            padding: 40px 20px;
+            scroll-behavior: smooth;
+        }}
+
+        /* --- SCRIPT FORMATTING --- */
+        .line {{
+            margin-bottom: 25px;
+            opacity: 0.4;
+            transition: opacity 0.5s, transform 0.5s;
+            padding: 10px;
+            border-left: 3px solid transparent;
+        }}
+
+        .line.active {{
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border-left-color: var(--accent-color);
+            transform: scale(1.02);
+        }}
+
+        .line.user-turn {{
+            border-left-color: #ff5722; /* Orange pour l'utilisateur */
+        }}
+
+        .speaker {{
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #bbb;
+        }}
+
+        .action {{
+            font-style: italic;
+            color: #888;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }}
+
+        .text {{
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }}
+
         .hidden-text {{
             color: transparent;
-            text-shadow: 0 0 15px rgba(255,255,255,0.5);
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
             user-select: none;
         }}
+
+        /* --- CONTROLS --- */
+        #controls {{
+            padding: 20px;
+            background: #181818;
+            border-top: 1px solid #333;
+            text-align: center;
+        }}
+
+        #status {{
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+        }}
+
+        #action-btn {{
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            font-family: var(--font-title);
+            font-size: 1.2em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #333;
+            color: #aaa;
+            transition: all 0.3s;
+        }}
+
+        #action-btn:not(:disabled) {{
+            background: var(--accent-color);
+            color: #000;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }}
+
+        #action-btn.verify-mode {{
+            background: #ff5722; /* Orange */
+            color: white;
+        }}
         
-        #controls {{ height: 80px; display: flex; justify-content: center; align-items: center; }}
-        #action-btn {{ width: 100%; height: 100%; font-size: 1.5em; background: #2196F3; }}
-        #status {{ text-align: center; color: #888; margin-bottom: 10px; }}
-        #error-msg {{ color: red; text-align: center; display: none; }}
+        #action-btn.continue-mode {{
+            background: #4caf50; /* Vert */
+            color: white;
+        }}
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {{ width: 8px; }}
+        ::-webkit-scrollbar-track {{ background: #121212; }}
+        ::-webkit-scrollbar-thumb {{ background: #333; border-radius: 4px; }}
+        ::-webkit-scrollbar-thumb:hover {{ background: #555; }}
+
     </style>
 </head>
 <body>
 
     <div id="setup">
-        <h1>Configuration de la répétition</h1>
-        <p>Quel rôle voulez-vous jouer ?</p>
-        <select id="role-select">
-            {''.join([f'<option value="{s}">{s}</option>' for s in all_speakers])}
-        </select>
-        <br><br>
-        <button onclick="startRehearsal()">Commencer</button>
-        <p style="font-size:0.8em; color:#888;">Note : Cliquez pour activer l'audio.</p>
+        <h1>THÉÂTRE STUDIO</h1>
+        <div class="setup-card">
+            <div class="form-group">
+                <label>SCÈNE</label>
+                <select id="scene-select" onchange="updateRoles()">
+                    <option value="">-- Choisir une scène --</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="role-group" style="display:none;">
+                <label>RÔLE</label>
+                <select id="role-select">
+                    <!-- Rempli par JS -->
+                </select>
+            </div>
+
+            <button class="start-btn" id="start-btn" onclick="startRehearsal()" style="display:none;">ENTRER EN SCÈNE</button>
+        </div>
     </div>
 
     <div id="stage">
-        <div id="status">En attente...</div>
-        <div id="error-msg"></div>
+        <div id="header-bar">
+            <span id="scene-title">TITRE</span>
+            <button id="back-btn" onclick="location.reload()">QUITTER</button>
+        </div>
+        
         <div id="dialogue-container"></div>
+        
         <div id="controls">
-            <button id="action-btn" onclick="handleUserAction()">Démarrer</button>
+            <div id="status">En attente...</div>
+            <div id="error-msg" style="color:red; display:none; margin-bottom:5px;"></div>
+            <button id="action-btn" onclick="handleUserAction()" disabled>Démarrer</button>
         </div>
     </div>
 
     <script>
-        const scriptData = {json.dumps(js_data, ensure_ascii=False)};
+        const allScenesData = {json.dumps(scenes_data, ensure_ascii=False)};
+        
+        let currentSceneData = null;
         let currentLineIndex = 0;
         let userRole = "";
         let isUserTurn = false;
         let userStep = "verify"; 
         let audioPlayer = new Audio();
 
+        const sceneSelect = document.getElementById('scene-select');
+        const roleSelect = document.getElementById('role-select');
+        const roleGroup = document.getElementById('role-group');
+        const startBtn = document.getElementById('start-btn');
+
+        Object.keys(allScenesData).forEach(sceneName => {{
+            const option = document.createElement('option');
+            option.value = sceneName;
+            option.textContent = sceneName.toUpperCase();
+            sceneSelect.appendChild(option);
+        }});
+
+        function updateRoles() {{
+            const sceneName = sceneSelect.value;
+            roleSelect.innerHTML = "";
+            
+            if (sceneName && allScenesData[sceneName]) {{
+                const roles = allScenesData[sceneName].roles;
+                roles.forEach(role => {{
+                    const option = document.createElement('option');
+                    option.value = role;
+                    option.textContent = role;
+                    roleSelect.appendChild(option);
+                }});
+                roleGroup.style.display = 'block';
+                startBtn.style.display = 'inline-block';
+            }} else {{
+                roleGroup.style.display = 'none';
+                startBtn.style.display = 'none';
+            }}
+        }}
+
         audioPlayer.onerror = function() {{
-            const err = "Erreur de lecture audio : " + (audioPlayer.error ? audioPlayer.error.message : "Inconnue");
+            const err = "Erreur audio";
             console.error(err);
-            document.getElementById('error-msg').innerText = err + " (Vérifiez que les fichiers sont bien dans le dossier audio/)";
+            document.getElementById('error-msg').innerText = err;
             document.getElementById('error-msg').style.display = 'block';
             setTimeout(() => playLine(currentLineIndex + 1), 2000);
         }};
 
         function startRehearsal() {{
-            userRole = document.getElementById('role-select').value;
-            document.getElementById('setup').style.display = 'none';
-            document.getElementById('stage').style.display = 'flex';
+            const sceneName = sceneSelect.value;
+            userRole = roleSelect.value;
+            
+            if (!sceneName || !userRole) return;
+            
+            currentSceneData = allScenesData[sceneName].dialogue;
+            
+            document.getElementById('scene-title').innerText = sceneName.toUpperCase() + " // " + userRole;
+            document.getElementById('setup').style.opacity = '0';
+            setTimeout(() => {{
+                document.getElementById('setup').style.display = 'none';
+                document.getElementById('stage').style.display = 'flex';
+            }}, 500);
             
             audioPlayer.play().catch(() => {{}});
             
             renderScript();
-            playLine(0);
+            
+            setTimeout(() => playLine(0), 500);
         }}
 
         function renderScript() {{
             const container = document.getElementById('dialogue-container');
-            container.innerHTML = scriptData.map((line, index) => {{
-                // On cache le texte si c'est le rôle de l'utilisateur
+            container.innerHTML = currentSceneData.map((line, index) => {{
                 const isUser = line.speaker === userRole;
                 const hiddenClass = isUser ? 'hidden-text' : '';
                 
+                let actionHtml = '';
+                if (line.action) {{
+                    actionHtml = `<div class="action">${{line.action}}</div>`;
+                }}
+
                 return `
                 <div class="line" id="line-${{index}}">
                     <div class="speaker">${{line.speaker}}</div>
+                    ${{actionHtml}}
                     <div class="text ${{hiddenClass}}">${{line.text}}</div>
                 </div>
                 `;
@@ -219,21 +509,25 @@ async def generate_export():
                 el.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
                 document.querySelectorAll('.line').forEach(l => l.classList.remove('active', 'user-turn'));
                 el.classList.add('active');
-                if (scriptData[index].speaker === userRole) {{
+                if (currentSceneData[index].speaker === userRole) {{
                     el.classList.add('user-turn');
                 }}
             }}
         }}
 
         function playLine(index) {{
-            if (index >= scriptData.length) {{
-                document.getElementById('status').innerText = "Fin de la scène.";
+            if (index >= currentSceneData.length) {{
+                document.getElementById('status').innerText = "FIN DE LA SCÈNE";
+                document.getElementById('action-btn').innerText = "Recommencer";
+                document.getElementById('action-btn').onclick = () => location.reload();
+                document.getElementById('action-btn').disabled = false;
+                document.getElementById('action-btn').className = "";
                 return;
             }}
 
             currentLineIndex = index;
             scrollToLine(index);
-            const line = scriptData[index];
+            const line = currentSceneData[index];
             const btn = document.getElementById('action-btn');
             const status = document.getElementById('status');
             document.getElementById('error-msg').style.display = 'none';
@@ -241,65 +535,51 @@ async def generate_export():
             if (line.speaker === userRole) {{
                 isUserTurn = true;
                 userStep = "verify";
-                
-                // Le texte est déjà caché par renderScript, pas besoin de le refaire ici
-                
-                status.innerText = "C'est à vous !";
-                btn.innerText = "Vérifier";
-                btn.style.background = "#FF9800";
+                status.innerText = "C'EST À VOUS";
+                btn.innerText = "VÉRIFIER";
+                btn.className = "verify-mode";
                 btn.disabled = false;
             }} else {{
                 isUserTurn = false;
-                status.innerText = line.speaker + " parle...";
-                btn.innerText = "Écoute...";
-                btn.style.background = "#555";
+                status.innerText = line.speaker + " PARLE...";
+                btn.innerText = "ÉCOUTE...";
+                btn.className = "";
                 btn.disabled = true;
 
                 if (line.audio) {{
-                    console.log("Lecture : " + line.audio);
                     audioPlayer.src = line.audio;
-                    
                     const playPromise = audioPlayer.play();
-                    
                     if (playPromise !== undefined) {{
-                        playPromise.then(_ => {{}})
-                        .catch(error => {{
-                            console.warn("Autoplay bloqué ou erreur : " + error);
-                            btn.innerText = "Lecture bloquée (Cliquez ici)";
+                        playPromise.then(_ => {{}}).catch(error => {{
+                            console.warn("Autoplay bloqué");
+                            btn.innerText = "LECTURE BLOQUÉE (CLIQUEZ)";
                             btn.style.background = "red";
                             btn.disabled = false;
                             btn.onclick = function() {{
                                 audioPlayer.play();
                                 btn.onclick = handleUserAction;
                                 btn.disabled = true;
-                                btn.style.background = "#555";
+                                btn.style.background = "#333";
                             }};
                         }});
                     }}
-                    
-                    audioPlayer.onended = () => {{
-                        playLine(index + 1);
-                    }};
+                    audioPlayer.onended = () => {{ playLine(index + 1); }};
                 }} else {{
-                    setTimeout(() => playLine(index + 1), 1000);
+                    setTimeout(() => playLine(index + 1), 1500);
                 }}
             }}
         }}
 
         function handleUserAction() {{
             if (!isUserTurn) return;
-
             if (userStep === "verify") {{
-                // Étape 1 : Révéler le texte
                 const textEl = document.querySelector(`#line-${{currentLineIndex}} .text`);
                 textEl.classList.remove('hidden-text');
-                
                 const btn = document.getElementById('action-btn');
-                btn.innerText = "Continuer";
-                btn.style.background = "#4CAF50";
+                btn.innerText = "CONTINUER";
+                btn.className = "continue-mode";
                 userStep = "next";
             }} else {{
-                // Étape 2 : Passer à la suite
                 playLine(currentLineIndex + 1);
             }}
         }}
@@ -312,7 +592,7 @@ async def generate_export():
         f.write(html_content)
         
     print(f"--- Export terminé avec succès ! ---")
-    print(f"Ouvrez ce fichier dans votre navigateur : {os.path.join(full_export_path, 'index.html')}")
+    print(f"Ouvrez ce fichier : {os.path.join(full_export_path, 'index.html')}")
 
 if __name__ == "__main__":
     asyncio.run(generate_export())

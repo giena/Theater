@@ -1,4 +1,4 @@
 .idea/
 venv/
-scenes/
-export/
+raw_extracts/
+# docs/ doit être versionné pour GitHub Pages

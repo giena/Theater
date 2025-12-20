@@ -24,7 +24,22 @@ Ce projet fournit des outils pour aider les comédiens à apprendre leur texte. 
 
 ## Utilisation
 
-### 1. Répétition interactive (Terminal)
+### 1. Importer une scène depuis un PDF (Optionnel)
+
+Si vous avez le texte de la pièce en PDF, vous pouvez extraire une scène spécifique pour éviter de tout retaper.
+
+```bash
+python import_pdf.py <fichier.pdf> <"Titre de la scène"> <fichier_sortie.txt>
+```
+
+**Exemple :**
+```bash
+python import_pdf.py piece_complete.pdf "SCÈNE 1" scenes/scene1.txt
+```
+
+*Note : Le fichier texte généré nécessitera probablement un nettoyage manuel (supprimer les scènes suivantes, corriger la mise en page).*
+
+### 2. Répétition interactive (Terminal)
 
 Pour lancer une répétition directement dans votre terminal :
 
@@ -40,7 +55,7 @@ python repetition.py scenes/mariage.txt CHRISTIAN
 
 Le script lira les répliques des autres personnages et s'arrêtera quand c'est à vous de parler. Appuyez sur **Entrée** une fois votre texte dit pour continuer.
 
-### 2. Exportation Web (HTML/Audio)
+### 3. Exportation Web (HTML/Audio)
 
 Vous pouvez générer une version autonome de la scène (page HTML + fichiers MP3) pour répéter sur n'importe quel appareil (smartphone, tablette) sans avoir besoin de Python.
 
