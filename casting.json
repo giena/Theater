@@ -1,0 +1,17 @@
+{
+  "comment": "Configuration des voix pour la répétition. Utilisez des voix 'edge-tts' (ex: fr-FR-HenriNeural).",
+  "default_voice": "femme",
+  "voices": {
+    "homme": "fr-FR-HenriNeural",
+    "femme": "fr-FR-DeniseNeural"
+  },
+  "roles": {
+    "CHRISTIAN": "homme",
+    "MICHEL": "homme",
+    "LE MARI DE MICHEL": "homme",
+    "CAROLINE": "femme",
+    "CHRISTELLE": "femme",
+    "NATHALIE": "femme",
+    "MARIE-ÈVE": "femme"
+  }
+}
