@@ -1,11 +1,11 @@
 # Outil de Répétition de Théâtre
 
-Ce petit outil permet de répéter un rôle en donnant la réplique. Il lit le texte des autres personnages avec une voix naturelle (Google TTS) et attend votre intervention.
+Ce projet fournit des outils pour aider les comédiens à apprendre leur texte. Il permet de répéter une scène en donnant la réplique, soit via un script Python interactif, soit via une page web autonome générée.
 
 ## Prérequis
 
 - Python 3 installé
-- Une connexion internet (pour la génération de voix)
+- Une connexion internet (pour la génération des voix via Microsoft Edge TTS)
 
 ## Installation
 
@@ -24,24 +24,47 @@ Ce petit outil permet de répéter un rôle en donnant la réplique. Il lit le t
 
 ## Utilisation
 
-Pour lancer une répétition, utilisez la commande suivante :
+### 1. Répétition interactive (Terminal)
+
+Pour lancer une répétition directement dans votre terminal :
 
 ```bash
 python repetition.py <chemin_du_fichier_scene> <NOM_DU_PERSONNAGE>
 ```
 
-### Exemple
-
+**Exemple :**
 Pour répéter le rôle de **Christian** dans la scène `mariage.txt` :
-
 ```bash
 python repetition.py scenes/mariage.txt CHRISTIAN
 ```
 
-## Fonctionnement
+Le script lira les répliques des autres personnages et s'arrêtera quand c'est à vous de parler. Appuyez sur **Entrée** une fois votre texte dit pour continuer.
 
-- Le script lit le fichier texte ligne par ligne.
-- Il détecte les personnages (format `NOM. Texte...`).
-- Il prononce à voix haute les répliques des autres personnages.
-- Quand c'est à votre tour, il s'arrête et affiche `(C'est à vous !)`.
-- Dites votre texte, puis appuyez sur **Entrée** pour vérifier et continuer.
+### 2. Exportation Web (HTML/Audio)
+
+Vous pouvez générer une version autonome de la scène (page HTML + fichiers MP3) pour répéter sur n'importe quel appareil (smartphone, tablette) sans avoir besoin de Python.
+
+Lancez la commande :
+```bash
+python export_html.py
+```
+
+Cela va créer un dossier `export/` contenant :
+- `index.html` : L'interface de répétition.
+- `audio/` : Tous les fichiers sons générés.
+
+Il vous suffit de copier ce dossier `export` où vous voulez et d'ouvrir `index.html` dans un navigateur.
+
+## Configuration (Casting)
+
+Vous pouvez configurer les voix (Homme/Femme) associées à chaque personnage en modifiant le fichier `casting.json`.
+
+Exemple :
+```json
+{
+  "roles": {
+    "CHRISTIAN": "homme",
+    "CAROLINE": "femme"
+  }
+}
+```
