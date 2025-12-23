@@ -1,6 +1,6 @@
 [
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Viens, on va marcher un petit peu Cécile."
   },
   {
@@ -8,7 +8,7 @@
     "text": "Pourquoi ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Parce que c’est l’heure de marcher, de se promener un peu… Comme tous les jours, et puis parce que c’est l’heure, voilà.",
     "action": "(visiblement nerveux, faisant des efforts pour garder un ton modéré) Il se met à marcher."
   },
@@ -18,7 +18,7 @@
     "action": "(finissant par le suivre)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui."
   },
   {
@@ -26,7 +26,7 @@
     "text": "Ah bon ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Tu ne veux pas marcher aujourd’hui ??",
     "action": "(essayant de contenir son irritation)"
   },
@@ -35,7 +35,7 @@
     "text": "Si si… Comme tous les jours ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Quasiment."
   },
   {
@@ -43,7 +43,7 @@
     "text": "Et ensemble ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Absolument."
   },
   {
@@ -51,7 +51,7 @@
     "text": "Ah bon. Je me souviens pas de vous… Vous êtes qui en fait ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Je suis ton mari.",
     "action": "(calmement, désabusé)"
   },
@@ -60,7 +60,7 @@
     "text": "Mon mari ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui."
   },
   {
@@ -68,7 +68,7 @@
     "text": "On est mariés ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Absolument."
   },
   {
@@ -76,7 +76,7 @@
     "text": "Ah bon ? Eh ben…!! On est mariés ?! Vous et moi !?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Absolument."
   },
   {
@@ -84,7 +84,7 @@
     "text": "Depuis combien de temps ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Dix-sept ans."
   },
   {
@@ -92,7 +92,7 @@
     "text": "C’est vieux…?? Je veux dire dans la durée ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui assez."
   },
   {
@@ -101,7 +101,7 @@
     "action": "(essayant de réaliser)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Serge !"
   },
   {
@@ -110,7 +110,7 @@
     "action": "(surprise et riant)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Tu peux me tutoyer en fait !!",
     "action": "(un peu vexé)"
   },
@@ -119,7 +119,7 @@
     "text": "Évidemment si on est mariés. C’est étonnant, vraiment…"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui je sais."
   },
   {
@@ -127,7 +127,7 @@
     "text": "Je suis votre femme en fait ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ben oui."
   },
   {
@@ -135,7 +135,7 @@
     "text": "Je suis ta femme, c’est drôle ça… Tu fais quoi dans la vie…??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Je vends des voitures."
   },
   {
@@ -143,7 +143,7 @@
     "text": "C’est un métier ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui, c’est un métier.",
     "action": "(ayant du mal à contenir son irritation)"
   },
@@ -152,7 +152,7 @@
     "text": "Et on vit ensemble ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Non on ne vit plus ensemble… Tu vis ici toi…"
   },
   {
@@ -160,7 +160,7 @@
     "text": "En fait on est séparés ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui et non. Tu es hospitalisée… Depuis deux ans."
   },
   {
@@ -168,7 +168,7 @@
     "text": "Merde alors !!"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui."
   },
   {
@@ -176,17 +176,17 @@
     "text": "Qu’est-ce qui m’est arrivé ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oh non, pas cette histoire à nouveau, s’il te plaît.",
     "action": "(s’arrêtant) Il reprend sa marche."
   },
   {
     "speaker": "LA FEMME",
     "text": "Ah bon !? Ça me semblait important mais bon… En tout cas, je dois plus avoir énormément de mémoire. J’en reviens pas que je sois mariée avec vous… Ça veut dire qu’on est amoureux ?? Ou qu’on l’a été sans doute…!! C’est drôle.",
-    "action": "(déçue, suivant l’homme)"
+    "action": "(déçue, suivant L'HOMME)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Qu’est-ce qui est drôle ?"
   },
   {
@@ -194,7 +194,7 @@
     "text": "Ben cette idée !! Je vous ai déjà posé toutes ces questions on dirait ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "À peu près tous les jours."
   },
   {
@@ -202,7 +202,7 @@
     "text": "Je vous pose des questions tous les jours ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui à peu près, à cette même heure, c’est l’heure où je passe te voir… C’est le plus pratique pour moi… Alors on marche… comme ça et tu me poses des questions… Souvent en premier c’est : “mais qui vous êtes ?”, et hop après c’est parti…"
   },
   {
@@ -210,7 +210,7 @@
     "text": "C’est agaçant… Je n’ai aucun souvenir de tout ça…"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Non aucun… C’est agaçant. Mais c’est pas grave… Il y a des vies encore plus compliquées que la nôtre… Faut pas se plaindre…"
   },
   {
@@ -218,7 +218,7 @@
     "text": "Non mais c’est ennuyeux…? Tout le monde n’est pas comme ça visiblement. On a des enfants ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Deux."
   },
   {
@@ -227,7 +227,7 @@
     "action": "(très étonnée)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Treize et dix-sept."
   },
   {
@@ -235,7 +235,7 @@
     "text": "Fille ou garçon ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Les deux."
   },
   {
@@ -243,7 +243,7 @@
     "text": "Et ils s’appellent ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Antoine et Marie-Ève."
   },
   {
@@ -252,7 +252,7 @@
     "action": "(s’arrêtant)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Quoi ? Tu n’aimes pas leurs prénoms aujourd’hui ??",
     "action": "(sèchement, continuant à marcher)"
   },
@@ -262,16 +262,16 @@
     "action": "(Très émue.)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui tu as des enfants, on a des enfants."
   },
   {
     "speaker": "LA FEMME",
     "text": "Mais comment c’est possible ça !? Pourquoi est-ce qu’ils ne viennent pas me voir ??",
-    "action": "(au bord des larmes) (Rattrapant l’homme.)"
+    "action": "(au bord des larmes) (Rattrapant L'HOMME.)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Mais si, ils viennent te voir… Bien sûr. Principalement le week-end… Ils sont venus il y a deux jours."
   },
   {
@@ -279,7 +279,7 @@
     "text": "Il y a deux jours ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ils t’aiment beaucoup rassure-toi."
   },
   {
@@ -287,7 +287,7 @@
     "text": "Ah bon ? Et moi ?? Je les aime aussi ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui bien sûr !! Beaucoup. Évidemment."
   },
   {
@@ -296,7 +296,7 @@
     "action": "(Un petit temps.)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui, absolument."
   },
   {
@@ -304,7 +304,7 @@
     "text": "En fait moi je ne suis pas encore certaine d’être amoureuse de vous… Ça me paraît très rapide tout ça…"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Je sais, ne t’inquiète pas."
   },
   {
@@ -312,7 +312,7 @@
     "text": "C’est gênant quand même pour des gens mariés de pas être sûrs de s’aimer, vous trouvez pas ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Non non, c’est pas grave.",
     "action": "(sur un ton détaché)"
   },
@@ -321,7 +321,7 @@
     "text": "Ah bon ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Je m’en fous.",
     "action": "(désabusé)"
   },
@@ -330,7 +330,7 @@
     "text": "Ah bon ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Pardon mais essaie de me tutoyer surtout… Certains jours tu y arrives !!!",
     "action": "(s’arrêtant brusquement, s’emportant) Un petit temps."
   },
@@ -339,7 +339,7 @@
     "text": "D’accord… Pardon, est-ce que je peux te poser une autre question : on a déjà fait l’amour ensemble ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ben oui…!! Au moins deux fois.",
     "action": "(ironique)"
   },
@@ -348,7 +348,7 @@
     "text": "C’est une plaisanterie ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ben oui."
   },
   {
@@ -356,7 +356,7 @@
     "text": "On a déjà fait l’amour ou pas ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ben oui on a fait l’amour ensemble, évidemment. Écoute je sais que tu le fais pas exprès mais aujourd’hui ça m’angoisse de plus en plus tes questions, excuse-moi !! D’autant que… je suis fatigué.",
     "action": "(explosant) Il est très ému."
   },
@@ -365,7 +365,7 @@
     "text": "Je m’excuse, ce sont de simples questions… elles, qui me paraissent naturelles à moi…"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Excuse-moi, ta mémoire n’a plus son meilleur rendement je ne t’en veux pas, c’est dur des fois, on a fait deux enfants ensemble, alors voilà. Oui, on fait l’amour. On l’a même fait hier l’amour, si tu veux que je te dise…",
     "action": "(se reprenant un peu)"
   },
@@ -374,7 +374,7 @@
     "text": "On a fait l’amour hier ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui, très rapidement, en rentrant de se balader, dans ta chambre. Oui certains jours tu en as très envie."
   },
   {
@@ -383,7 +383,7 @@
     "action": "(surprise, riant)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ben c’est comme ça… On parle à peu près comme on est en train de le faire. Tu me poses à peu près les mêmes questions. Et puis à un moment, quand je te raccompagne dans ta chambre, tu me demandes si j’en ai envie… Tu me dis que ça t’a donné envie cette discussion avec moi… Envie de faire l’amour avec quelqu’un… Alors tu me demandes si je serais d’accord de le faire avec toi.",
     "action": "(vexé) (Sur un ton très irrité.)"
   },
@@ -392,7 +392,7 @@
     "text": "Je te parle comme ça ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "À peu près oui."
   },
   {
@@ -400,7 +400,7 @@
     "text": "Et tu me réponds quoi ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ça dépend. Hier je t’ai répondu d’accord, je suis d’accord d’être cette personne… avec qui tu vas pouvoir concrétiser cette envie de faire l’amour avec quelqu’un…",
     "action": "Un temps. Ils continuent à marcher en silence."
   },
@@ -409,7 +409,7 @@
     "text": "On pourrait peut-être se prendre dans les bras si vous voulez ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Tu en as envie ?",
     "action": "(s’arrêtant)"
   },
@@ -419,7 +419,7 @@
     "action": "(s’arrêtant)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Si tu en as envie.",
     "action": "(comme indifférent)"
   },
@@ -428,7 +428,7 @@
     "text": "Pour moi, j’ai l’impression que c’est la première fois…"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui je sais."
   },
   {
@@ -436,17 +436,17 @@
     "text": "Alors on peut essayer peut-être… Qui commence ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Vas-y toi !",
-    "action": "La femme s’approche et après quelques hésitations prend l’homme dans ses bras. Il se laisse faire."
+    "action": "La femme s’approche et après quelques hésitations prend L'HOMME dans ses bras. Il se laisse faire."
   },
   {
     "speaker": "LA FEMME",
     "text": "C’est la première fois.",
-    "action": "(s’éloignant de l’homme)"
+    "action": "(s’éloignant de L'HOMME)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui je sais.",
     "action": "(reprenant sa marche)"
   },
@@ -456,7 +456,7 @@
     "action": "(Un temps.)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Comme un couple ordinaire qui vient de se marier.",
     "action": "(sèchement)"
   },
@@ -465,7 +465,7 @@
     "text": "C’est quoi un couple ordinaire ?"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ben c’est des gens ordinaires qui se marient."
   },
   {
@@ -474,17 +474,17 @@
     "action": "(déçue)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Mais non, quand on s’est rencontrés c’était parfait. On était comme deux moitiés qui s’étaient perdues et qui se retrouvaient. C’était merveilleux. C’était comme si la Corée du Nord et la Corée du Sud ouvraient leurs frontières et se réunifiaient et que les gens qui avaient été empêchés de se voir pendant des années se retrouvaient. C’était la fête, on sentait qu’on était reliés et que ça remontait à très loin.",
-    "action": "(s’arrêtant, regardant sa femme dans les yeux, explosant) Un temps. L’homme a repris sa marche."
+    "action": "(s’arrêtant, regardant sa femme dans les yeux, explosant) Un temps. L'HOMME a repris sa marche."
   },
   {
     "speaker": "LA FEMME",
     "text": "Ah bon c’était comme ça… Est-ce qu’il y a des choses sur lesquelles on est vraiment d’accord aujourd’hui tous les deux ? Ou qu’on aime le mieux faire ensemble par-dessus tout ?",
-    "action": "(marchant à la suite de l’homme, émue) (Un temps.)"
+    "action": "(marchant à la suite de L'HOMME, émue) (Un temps.)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "En dehors de faire l’amour ?"
   },
   {
@@ -492,7 +492,7 @@
     "text": "Euh oui…"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ramasser des champignons !!"
   },
   {
@@ -501,7 +501,7 @@
     "action": "(très surprise)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui."
   },
   {
@@ -509,7 +509,7 @@
     "text": "Mais c’est ridicule !!"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Absolument. Je sais, mais on adore faire ça !!"
   },
   {
@@ -517,7 +517,7 @@
     "text": "Ah bon ??"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Oui."
   },
   {
@@ -526,7 +526,7 @@
     "action": "(s’arrêtant)"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Tu es fatiguée ?",
     "action": "(s’arrêtant)"
   },
@@ -535,7 +535,7 @@
     "text": "Oui un peu. J’ai envie d’aller dans la chambre…"
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Ben écoute on va y aller… J’ai encore un peu de temps"
   },
   {
@@ -544,12 +544,12 @@
     "action": "Elle commence à sortir."
   },
   {
-    "speaker": "L’HOMME",
+    "speaker": "L'HOMME",
     "text": "Non c’est par là ta chambre."
   },
   {
     "speaker": "LA FEMME",
     "text": "Ah bon ? Bien.",
-    "action": "(s’arrêtant) Elle repart dans l’autre direction. L’homme la suit. Ils marchent côte à côte. Avant de sortir l’homme a un petit geste de la main, affectueux, presque involontaire, pour sa femme. Sa main effleure son dos."
+    "action": "(s’arrêtant) Elle repart dans l’autre direction. L'HOMME la suit. Ils marchent côte à côte. Avant de sortir L'HOMME a un petit geste de la main, affectueux, presque involontaire, pour sa femme. Sa main effleure son dos."
   }
 ]
